@@ -3,6 +3,7 @@ package com.cong.wanandroid.net
 import com.cong.wanandroid.net.bean.ArticleList
 import com.cong.wanandroid.net.bean.BaseResponse
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 /**
  *
@@ -11,6 +12,6 @@ import retrofit2.http.GET
  * @date: 2022年05月12日
  */
 interface WanAndroidApi {
-    @GET("article/list/0/json")
-    suspend fun getHomeArticleList(): BaseResponse<ArticleList>
+    @GET("article/list/{page}/json")
+    suspend fun getHomeArticleList(@Path("page") page:Int): BaseResponse<ArticleList>
 }
