@@ -11,7 +11,7 @@ import com.cong.wanandroid.net.bean.BaseResponse
  * @date: 2022年05月12日
  */
 class ArticleRepo {
-    suspend fun getHomeArticle(): BaseResponse<ArticleList> {
-        return ApiService.getApi().getHomeArticleList()
+    suspend fun getHomeArticle(): ArticleList {
+        return ApiService.getApi().getHomeArticleList().data
     }
 }

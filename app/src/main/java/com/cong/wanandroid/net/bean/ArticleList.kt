@@ -8,7 +8,7 @@ package com.cong.wanandroid.net.bean
  */
 data class ArticleList(
     val curPage: Int,
-    val datas: Array<Article>,
+    val datas: List<Article>,
     val offset: Int,
     val over: Boolean,
     val pageCount: Int,
